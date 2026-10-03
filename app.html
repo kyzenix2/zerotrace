@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App · ZeroTrace</title>
+  <meta name="description" content="Hold ZERO in encrypted notes, send and sell it privately, and earn from every trade.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ZeroTrace">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#141518"/><path d="M8.5 23.2 23.2 8.6" stroke="#c8f542" stroke-width="3.4" stroke-linecap="round"/></svg>
+        zerotrace
+      </a>
+      <nav class="nav">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#yield">Holder yield</a>
+        <a href="index.html#get">Get ZERO</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://docs.zerotrace.so/" target="_blank" rel="noreferrer">Docs</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-lime" href="app.html">Open app
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container" style="padding-bottom:80px">
+    <div class="page-split" style="padding-top:48px">
+      <div>
+        <h1 class="display h2">Open your private balance.</h1>
+        <p class="lede" style="margin-top:16px">Hold ZERO in encrypted notes, send and sell it privately, and earn from every trade.</p>
+        <ol class="steps-plain">
+          <li><span class="num">1</span><div><strong>Connect</strong><span>A browser wallet on Robinhood Chain.</span></div></li>
+          <li><span class="num">2</span><div><strong>Sign once</strong><span>Your privacy keys come from one signature. Nothing to back up.</span></div></li>
+          <li><span class="num">3</span><div><strong>Buy or shield ZERO</strong><span>It lands in a private note only you can read.</span></div></li>
+        </ol>
+        <div class="panel" data-wallet style="margin-top:28px">
+          <strong>Connect wallet</strong>
+          <p class="status-line">MetaMask or any browser wallet.</p>
+          <div class="wallet-list">
+            <button type="button" data-connect>Browser wallet</button>
+          </div>
+        </div>
+      </div>
+      <article class="chain-card" style="height:34rem">
+        <canvas data-field="zero" aria-hidden="true"></canvas>
+        <span class="chain-label">what the chain stores</span>
+        <span class="chain-badge"><span class="dot"></span>your note, visible only to you</span>
+      </article>
+    </div>
+
+    <section class="privacy" style="padding-top:48px" aria-label="Protocol figures">
+      <div class="privacy-card">
+        <div class="privacy-visual">
+          <div class="privacy-top"><strong>Privacy set</strong><span>notes every balance hides among</span></div>
+          <div class="mark-wrap"><canvas data-mark aria-hidden="true"></canvas></div>
+          <p>Every private balance hides among these notes. Each one looks like the rest; only its owner can open it.</p>
+        </div>
+        <div class="stats">
+          <article class="stat"><div class="k">Shielded supply</div><strong>3.06%</strong><div class="s">of all ZERO in private notes</div></article>
+          <article class="stat up"><div class="k">Holder yield</div><strong>+105.45%</strong><div class="s">value of a share, since launch</div></article>
+          <article class="stat"><div class="k">Paid to holders</div><strong>11.64M</strong><div class="s">ZERO added to the vault from fees</div></article>
+          <article class="stat"><div class="k">Price</div><strong>1.98M</strong><div class="s">ZERO per 1 ETH</div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <p class="footer-blurb">ZERO, the privacy token on Robinhood Chain.</p>
+        <div><h3>Product</h3><ul><li><a href="app.html">App</a></li><li><a href="analytics.html">Analytics</a></li><li><a href="verify.html">Verify a payment</a></li></ul></div>
+        <div><h3>Contracts</h3><ul><li><span>ZERO token · TBA</span></li><li><a href="https://robinhoodchain.blockscout.com/address/0xf3935bec6247170B28e1755c85957A72f243D84D" target="_blank" rel="noreferrer">Vault</a></li></ul></div>
+        <div><h3>Resources</h3><ul><li><a href="https://docs.zerotrace.so/" target="_blank" rel="noreferrer">Docs</a></li><li><a href="https://docs.zerotrace.so/zerotrace-whitepaper.pdf" target="_blank" rel="noreferrer">Whitepaper</a></li></ul></div>
+        <div><h3>Community</h3><ul><li><a href="https://x.com/ZeroTrace_SOL" target="_blank" rel="noreferrer">X</a></li></ul></div>
+      </div>
+      <div class="footer-base"><span>© 2026 ZeroTrace</span><span>Built on Robinhood Chain</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

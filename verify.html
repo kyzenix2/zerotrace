@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify a payment · ZeroTrace</title>
+  <meta name="description" content="A proof of payment shows who received one private payment and how much. It reveals nothing else.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ZeroTrace">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#141518"/><path d="M8.5 23.2 23.2 8.6" stroke="#c8f542" stroke-width="3.4" stroke-linecap="round"/></svg>
+        zerotrace
+      </a>
+      <nav class="nav">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#yield">Holder yield</a>
+        <a href="index.html#get">Get ZERO</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://docs.zerotrace.so/" target="_blank" rel="noreferrer">Docs</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-lime" href="app.html">Open app
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container" style="padding-bottom:80px">
+    <div class="page-split" style="padding-top:56px; align-items:start">
+      <div class="page-hero" style="padding:0">
+        <h1 class="display h2">Verify a payment</h1>
+        <p class="lede">A proof of payment is created by the sender of a private transfer. It shows who received that one payment and how much, checked against the chain. It reveals nothing else, and it cannot be used to move the funds.</p>
+      </div>
+      <form class="panel verify-form" data-verify>
+        <label for="proof">Proof of payment</label>
+        <textarea id="proof" name="proof" placeholder="A link to this page, or the proof text on its own."></textarea>
+        <p class="form-error" role="status"></p>
+        <button class="btn btn-ink" type="submit" style="align-self:flex-start">Verify</button>
+        <div class="verified" data-verify-result hidden>
+          <div class="ok">Payment verified</div>
+          <div><span>recipient</span><b>0x51d0…77be</b></div>
+          <div><span>amount</span><b>1,500.00 ZERO</b></div>
+          <div><span>sender</span><b>not revealed</b></div>
+          <p data-proof-state style="margin:10px 0 0; color:#6e727a"></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-base"><span>© 2026 ZeroTrace</span><span>Built on Robinhood Chain</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
