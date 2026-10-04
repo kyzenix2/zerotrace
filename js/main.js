@@ -1,4 +1,4 @@
-const ADDRESS = "TBA";
+const ADDRESS = "0x59430f1ba747b41e582403f2e3102bc89645f964";
 
 const STEPS = [
   {
@@ -279,7 +279,7 @@ function setupCopy() {
     btn.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(ADDRESS);
-        toast("Copied");
+        toast("Address copied");
       } catch {
         toast(ADDRESS);
       }
